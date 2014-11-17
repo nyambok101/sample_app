@@ -1,5 +1,5 @@
 SampleApp::Application.routes.draw do
-  resources :users, :member => { confirm_destroy: :get } 
+  resources :users 
   resources :sessions, only: [:new, :create, :destroy]
   root  'static_pages#home'
   match '/signup',  to: 'users#new',            via: 'get'
